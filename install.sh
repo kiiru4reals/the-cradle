@@ -54,4 +54,17 @@ install_vscode() {
     echo "======================= Successfully installed vscode stable version as vscode.deb"
 }
 
+install_postman() {
+    echo "======================= Preparing postman ================================="
+    sudo wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz
+
+    echo "========================= Extracting postman ==========================="
+    sudo tar -xvzf postman-linux-x64.tar.gz -C /opt
+
+    echo "======================= Creating alias for postman =========================="
+    sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+    echo "===================== Postman has been installed, to run it open the terminal and enter postman=============================="
+}
+
 
