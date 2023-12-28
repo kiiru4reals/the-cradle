@@ -73,8 +73,11 @@ install_appimage_launcher() {
     echo "===================== Installing app image launcher ====================================="
     local appimagelauncher_url="https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb"
 
-    echo "=========================== Installing app image launcher ========================================="
-    wget -O appimage_laucher.deb "$download_url"
+    echo "=========================== Downloading app image launcher ========================================="
+    wget -O appimage_laucher.deb "$appimagelauncher_url"
+
+    echo "========================== Installing app image launcher =================================="
+    sudo apt install -y ./appimage_launcher.deb
 
     echo "==================== Successfully installed App image launcher ================================"
 }
