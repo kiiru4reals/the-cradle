@@ -41,7 +41,7 @@ install_brave() {
 
     echo "==================== Installing brave =========================="
 
-    sudo apt install brave-browser
+    sudo apt install -y brave-browser
 
 }
 
