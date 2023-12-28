@@ -45,7 +45,7 @@ install_brave() {
 
 }
 
-install_vs_code() {
+install_vscode() {
     echo "================== Installing the best IDE to ever exist =============================="
     local download_url="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
 
@@ -53,3 +53,5 @@ install_vs_code() {
 
     echo "======================= Successfully installed vscode stable version as vscode.deb"
 }
+
+
