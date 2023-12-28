@@ -67,4 +67,13 @@ install_postman() {
     echo "===================== Postman has been installed, to run it open the terminal and enter postman=============================="
 }
 
+install_appimage_launcher() {
+    echo "===================== Installing app image launcher ====================================="
+    local appimagelauncher_url="https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher_2.2.0-travis995.0f91801.bionic_amd64.deb"
+
+    echo "=========================== Installing app image launcher ========================================="
+    wget -O appimage_laucher.deb "$download_url"
+
+    echo "==================== Successfully installed App image launcher ================================"
+}
 
