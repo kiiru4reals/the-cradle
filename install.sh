@@ -77,3 +77,36 @@ install_appimage_launcher() {
     echo "==================== Successfully installed App image launcher ================================"
 }
 
+install_telegram() {
+    echo "============================ Installing Telegram desktop =================================="
+    sudo apt update
+    sudo apt install -y telegram-desktop
+}
+
+install_zoom() {
+
+    echo "============================== Downloading Zoom ============================="
+    local zoom_url="https://zoom.us/client/5.17.1.1840/zoom_amd64.deb"
+    wget -O zoom.deb "$zoom_url"
+
+    echo "========================= Installing Zoom ==================================="
+    sudo apt install -y ./zoom.deb
+}
+
+install_obsidian() {
+    local obsidian_url="https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/Obsidian-1.5.3.AppImage"
+    echo "============================ Downloading Obsidian Notes ===================================="
+    wget -O obsidian.AppImage "$obsidian_url"
+    echo "================================== Successfully downloaded Obsidian run it on the UI to complete installation. =========================================="
+
+}
+
+# Calling all functions
+install_flutter
+install_brave
+install_vscode
+install_postman
+install_appimage_launcher
+install_telegram
+install_zoom
+install_obsidian
