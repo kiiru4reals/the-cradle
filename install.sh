@@ -44,3 +44,12 @@ install_brave() {
     sudo apt install brave-browser
 
 }
+
+install_vs_code() {
+    echo "================== Installing the best IDE to ever exist =============================="
+    local download_url="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+
+    wget -O vscode.deb "$download_url"
+
+    echo "======================= Successfully installed vscode stable version as vscode.deb"
+}
