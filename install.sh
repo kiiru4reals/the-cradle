@@ -64,7 +64,7 @@ install_postman() {
     echo "======================= Creating alias for postman =========================="
     sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
-    echo "===================== Postman has been installed, to run it open the terminal and enter postman=============================="
+    echo "===================== Postman has been installed, to run it open the terminal and type postman =============================="
 }
 
 install_appimage_launcher() {
