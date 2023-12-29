@@ -106,6 +106,16 @@ install_obsidian() {
 
 }
 
+install_fvm() {
+    echo "============================= Setting up fvm ==========================================="
+    echo "============================= Assumption: User has no homebrew installed =============================================="
+    echo "============================= Installing homebrew ========================================================="
+    sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "============================= Installing fvm =============================================="
+    brew tap leoafarias/fvm
+    brew install fvm
+}
+
 # Calling all functions
 install_flutter
 install_brave
@@ -115,3 +125,4 @@ install_appimage_launcher
 install_telegram
 install_zoom
 install_obsidian
+install_fvm
