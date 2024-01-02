@@ -106,6 +106,15 @@ install_obsidian() {
 
 }
 
+install_fvm() {
+    echo "============================= Setting up fvm ==========================================="
+    echo "============================= Assumption: User has no homebrew installed =============================================="
+    echo "============================= Installing homebrew ========================================================="
+    sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "============================= Installing fvm =============================================="
+    brew tap leoafarias/fvm
+    brew install fvm
+
 install_docker() {
     echo "========================= Initializing the docker installation process ======================================"
     sudo apt install -y docker.io
@@ -132,4 +141,5 @@ install_appimage_launcher
 install_telegram
 install_zoom
 install_obsidian
+install_fvm
 install_docker
