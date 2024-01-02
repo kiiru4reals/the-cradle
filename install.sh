@@ -114,6 +114,22 @@ install_fvm() {
     echo "============================= Installing fvm =============================================="
     brew tap leoafarias/fvm
     brew install fvm
+
+install_docker() {
+    echo "========================= Initializing the docker installation process ======================================"
+    sudo apt install -y docker.io
+    echo "========================= Enabling the docker service ====================================================="
+    sudo systemctl enable docker --now
+    echo "Adding current user to the docker group ================================================"
+    sudo usermod -aG docker $USER
+    echo "============================ Installing docker-ce ======================================"
+    printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" | sudo tee /etc/apt/sources.list.d/docker-ce.list
+    echo "=============================== Importing the gpg key ====================================="
+    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
+    echo "========================= Updating repositories ========================================"
+    sudo apt -y update
+    echo "================================= Installing docker-ce ================================="
+    sudo apt install -y docker-ce docker-ce-cli containerd.io
 }
 
 # Calling all functions
@@ -126,3 +142,4 @@ install_telegram
 install_zoom
 install_obsidian
 install_fvm
+install_docker
