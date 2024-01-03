@@ -19,5 +19,11 @@ install_altair (){
     ./altair_6_1_0.AppImage
 }
 
+install_clairvoyance () {
+    local clairvoyance_url="https://github.com/nikitastupin/clairvoyance.git"
+    git clone "$clairvoyance_url"
+}
+
 # Calling all functions
 install_altair
+install_clairvoyance
