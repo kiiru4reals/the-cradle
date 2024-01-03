@@ -132,6 +132,15 @@ install_docker() {
     sudo apt install -y docker-ce docker-ce-cli containerd.io
 }
 
+install_docker_desktop () {
+    local docker_desktop_url="https://desktop.docker.com/linux/main/amd64/docker-desktop-4.26.1-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64"
+    echo "=========================== Downloading docker desktop ============================================="
+    wget -O docker-desktop.deb "$docker_desktop_url"
+    echo "=========================== Installing docker desktop =============================================="
+    sudo apt install ./docker-desktop.deb
+
+}
+
 # Calling all functions
 install_flutter
 install_brave
@@ -143,3 +152,4 @@ install_zoom
 install_obsidian
 install_fvm
 install_docker
+install_docker_desktop
