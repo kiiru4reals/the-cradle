@@ -20,3 +20,40 @@ This is a selection of tools that I use for my normal everyday stuff and can be 
 - Altair
 - Clairvoyance
 - inQl
+
+
+### Installation
+To install the following repository open your terminal and run 
+```
+git clone https://github.com/kiiru4reals/the-cradle
+```
+Navigate to the repository directory
+```sh
+cd the-cradle/
+```
+Make the scripts executable
+```sh
+sudo chmod +x *.sh
+```
+To install normal softwares you can run the following command
+```sh
+sudo ./install.sh
+```
+To install security tools run the following command
+```sh
+sudo ./security.sh
+```
+
+### Roadmap
+The following tools will be added in due time
+- Naabu: Port scanner
+- race-the-web: Tool for testing race conditions.
+- espoofer: Email spoofing testing tool.
+- Peass-ng: Linpeas and winpeas
+- blackeye: Phishing tool
+- Arjun: HTTP parameter discovery suite
+
+
+### Contribution
+- Would you like to contribute to this repository? Kindly fork it and contribute.
+- Do the scripts break? Feel free to raise an issue on the issues tab. I don't guarantee an instant solution but once I get around to it. I shall fix it and let you know.
