@@ -114,6 +114,7 @@ install_fvm() {
     echo "============================= Installing fvm =============================================="
     brew tap leoafarias/fvm
     brew install fvm
+}
 
 install_docker() {
     echo "========================= Initializing the docker installation process ======================================"
