@@ -142,6 +142,10 @@ install_docker_desktop () {
 
 }
 
+install_tilix(){
+    sudo apt install -y tilix
+}
+
 # Calling all functions
 install_flutter
 install_brave
@@ -154,3 +158,4 @@ install_obsidian
 install_fvm
 install_docker
 install_docker_desktop
+install_tilix
