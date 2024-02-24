@@ -66,6 +66,10 @@ install_crackql () {
     echo "================================ Navigating to root directory ========================================"
 
 }
+
+install_arjun() {
+    sudo apt install -y arjun
+}
 # Calling all functions
 install_clairvoyance
 install_inql
@@ -74,3 +78,4 @@ install_batchql
 install_graphql_path_enum
 install_graphql_cop
 install_crackql
+install_arjun
