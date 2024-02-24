@@ -146,6 +146,13 @@ install_tilix(){
     sudo apt install -y tilix
 }
 
+install_altair (){
+    local altair_url="https://github.com/altair-graphql/altair/releases/download/v6.1.0/altair_6.1.0_x86_64_linux.AppImage"
+    wget -O altair_6_1_0.AppImage "$altair_url"
+    sudo chmod u+x altair_6_1_0.AppImage
+    ./altair_6_1_0.AppImage
+}
+
 # Calling all functions
 install_flutter
 install_brave
@@ -159,3 +166,4 @@ install_fvm
 install_docker
 install_docker_desktop
 install_tilix
+install_altair
