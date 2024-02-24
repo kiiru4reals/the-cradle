@@ -51,7 +51,6 @@ The following tools will be added in due time
 - espoofer: Email spoofing testing tool.
 - Peass-ng: Linpeas and winpeas
 - blackeye: Phishing tool
-- Arjun: HTTP parameter discovery suite
 
 
 ### Contribution
