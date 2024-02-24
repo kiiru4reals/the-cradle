@@ -11,6 +11,10 @@
 
 # Mobile security
 
+install_mobsf(){
+    docker pull opensecurity/mobile-security-framework-mobsf:latest   
+}
+
 # GraphQL security
 install_clairvoyance () {
     local clairvoyance_url="https://github.com/nikitastupin/clairvoyance.git"
