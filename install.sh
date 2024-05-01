@@ -145,6 +145,11 @@ install_terminator(){
     sudo apt install -y terminator
 }
 
+setup_bluetooth(){
+    sudo apt install -y bluetooth && sudo systemctl enable bluetooth.service
+    echo "========================================= Setup complete, reboot your machine for Bluetooth to work =======================================" 
+}
+
 # Calling all functions
 #install_flutter
 install_brave
