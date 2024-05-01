@@ -1,28 +1,5 @@
 #!/bin/bash
 
-# flutter
-install_flutter() {
-    # Clone flutter repository
-    git clone https://github.com/flutter/flutter.git -b master
-
-    # Add PATH to .bashrc
-    echo 'export PATH="$PATH:$HOME/flutter/flutter/bin"' >> $HOME/.bashrc
-
-    # Refresh the rc file
-    source $HOME/.bashrc
-
-    echo "================== Confirming if the flutter directory exists in PATH ==============================="
-    echo $PATH
-
-    echo "============================== Checking if we can use the flutter command =========================="
-    which flutter
-
-    echo "========================== Downloading pre-development binaries ==============================="
-    flutter precache
-
-    echo "Flutter SDK installation complete. Run 'flutter doctor' to install the rest."
-}
-
 # Brave browser
 install_brave() {
     # install curl
@@ -106,16 +83,6 @@ install_obsidian() {
 
 }
 
-install_fvm() {
-    echo "============================= Setting up fvm ==========================================="
-    echo "============================= Assumption: User has no homebrew installed =============================================="
-    echo "============================= Installing homebrew ========================================================="
-    sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "============================= Installing fvm =============================================="
-    brew tap leoafarias/fvm
-    brew install fvm
-}
-
 install_docker() {
     echo "========================= Initializing the docker installation process ======================================"
     sudo apt install -y docker.io
@@ -190,7 +157,6 @@ install_obsidian
 #install_fvm
 install_docker
 install_docker_desktop
-install_tilix
 install_altair
 install_spotify
 install_terminator
