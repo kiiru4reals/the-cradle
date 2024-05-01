@@ -189,3 +189,4 @@ install_docker_desktop
 install_tilix
 install_altair
 install_spotify
+install_terraform
