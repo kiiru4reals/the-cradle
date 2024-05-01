@@ -174,6 +174,10 @@ install_terraform() {
     sudo apt update -y && sudo apt install -y terraform
 }
 
+install_terminator(){
+    sudo apt install -y terminator
+}
+
 # Calling all functions
 #install_flutter
 install_brave
@@ -189,4 +193,5 @@ install_docker_desktop
 install_tilix
 install_altair
 install_spotify
+install_terminator
 install_terraform
