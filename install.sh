@@ -59,12 +59,6 @@ install_appimage_launcher() {
     echo "==================== Successfully installed App image launcher ================================"
 }
 
-install_telegram() {
-    echo "============================ Installing Telegram desktop =================================="
-    sudo apt update
-    sudo apt install -y telegram-desktop
-}
-
 install_zoom() {
 
     echo "============================== Downloading Zoom ============================="
@@ -163,7 +157,6 @@ install_brave
 install_vscode
 install_postman
 install_appimage_launcher
-install_telegram
 install_zoom
 install_obsidian
 #install_fvm
