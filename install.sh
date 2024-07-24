@@ -109,6 +109,13 @@ install_docker_desktop () {
 
 }
 
+install_docker_compose () {
+    echo "================================= Install docker compose ======================================="
+    sudo apt install -y docker-compose-plugin
+    echo "======================== Installation successful checking docker compose version ======================"
+    docker compose version
+}
+
 
 install_altair (){
     local altair_url="https://github.com/altair-graphql/altair/releases/download/v6.1.0/altair_6.1.0_x86_64_linux.AppImage"
@@ -162,6 +169,7 @@ install_obsidian
 #install_fvm
 install_docker
 install_docker_desktop
+install_docker_compose
 install_altair
 install_spotify
 install_terminator
